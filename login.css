@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.global-padding {
+  @apply lg:px-16 px-5
+}
