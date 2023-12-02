@@ -1,6 +1,6 @@
 function depositeMoney(){
     var dip = parseInt(document.getElementById('diposite').value); // Getting the value from input field
-    if (document.getElementById('diposite').value.trim() == '' || dip<0){  //This is to ensure that user can't send empty value
+    if (document.getElementById('diposite').value.trim() == '' || dip<0){  //This is to ensure that user can't send empty value or negative value
         alert('Please enter a valid in the input field.');
         return;
     }
@@ -19,7 +19,7 @@ function depositeMoney(){
 function withdrawMoney(){
     var wit = parseInt(document.getElementById('withdraw').value); // Getting the value from input field
 
-    if (document.getElementById('withdraw').value.trim() == '' || wit<0){  //This is to ensure that user can't send empty value
+    if (document.getElementById('withdraw').value.trim() == '' || wit<0){  //This is to ensure that user can't send empty value or negative value
         alert('Please enter a valid in the input field.');
         return;
     }
