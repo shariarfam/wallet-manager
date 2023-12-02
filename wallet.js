@@ -1,20 +1,28 @@
 function depositeMoney(){
-    var dip = parseInt(document.getElementById('diposite').value);
-
+    var dip = parseInt(document.getElementById('diposite').value); // Getting the value from input field
+    if (document.getElementById('diposite').value.trim() == ''){  //This is to ensure that user can't send empty value
+        alert('Please enter value in the input field.');
+        return;
+    }
     var currentAmount = parseInt(document.getElementById('current-wallet').innerText);
 
     var totalDiposite = parseInt(document.getElementById('totaldeposite').innerText);
 
-    currentAmount += dip;
-    totalDiposite += dip;
+    currentAmount += dip; //Adding current and new amount
+    totalDiposite += dip; //Adding total and new amount
 
     document.getElementById('current-wallet').innerText = currentAmount;
     document.getElementById('totaldeposite').innerText = totalDiposite;
-    document.getElementById('diposite').value = '';
+    document.getElementById('diposite').value = ''; //Clearing the input field
 }
 
 function withdrawMoney(){
-    var wit = parseInt(document.getElementById('withdraw').value);
+    var wit = parseInt(document.getElementById('withdraw').value); // Getting the value from input field
+
+    if (document.getElementById('withdraw').value.trim() == ''){  //This is to ensure that user can't send empty value
+        alert('Please enter value in the input field.');
+        return;
+    }
 
     var currentAmount = parseInt(document.getElementById('current-wallet').innerText);
 
@@ -24,9 +32,9 @@ function withdrawMoney(){
             document.getElementById('withdraw').value = '';
         }
     else{
-        currentAmount -= wit;
-        totalWithdraw += wit;
-        document.getElementById('withdraw').value = '';
+        currentAmount -= wit; //Substracting new amount from previous amount
+        totalWithdraw += wit; //Adding previous and new withdraw amount
+        document.getElementById('withdraw').value = ''; //Clearing the input field
         }
     
     document.getElementById('current-wallet').innerText = currentAmount;
@@ -38,5 +46,5 @@ function login(){
     window.location.href = 'login.html';
 }
 function index(){
-    window.location.href = 'index.html';
+    window.location.href = 'https://github.com/shariarfam';
 }

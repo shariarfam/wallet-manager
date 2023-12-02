@@ -12,17 +12,12 @@
     <title>Index</title>
   </head>
   <body class="mx-auto">
-    <!-- Testing Section 
-    <div class="text-center flex justify-center gap-20">
-      <a class="text-3xl " href="login.html"> Login</a>
-      <a class="text-3xl" href="wallet.html"> Wallet</a>
-    </div> -->
-
+    
     <!-- Header  -->
     <header class="lg:px-16 px-5">
       <div class="py-10 text-3xl flex justify-between">
         <button onclick="index()" class="text-3xl">SMART-WALLET</button>
-        <button onclick="login()"><h1>My Wallet <i class='bx bxs-shopping-bag'></i></h1></button>
+        <button onclick="login()" ><h1>My Wallet <i class='bx bxs-shopping-bag'></i></h1></button>
       </div>
     </header>
 
@@ -144,9 +139,9 @@
           <button onclick="login()">Login</button>
         </div>
         <div class="flex items-center gap-10">
-          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAbpJREFUSEu11U+IjlEUx/HPlELGQjZCmo3FFMmSlCyEpCGzENlQyEImJQv5kyzUCAtmahY2ykLUTP6syELWlv6WCBsLiymK0Kn76un2PPd5X8zd3XvO+X3vufeec/vM8OibYX1tgNnYic1YhQH8wls8wwPcwfemjZYAW3AtiZYSfY1DeFjn1AQ4g9M9HN9PHMfFPKYOcBanehCvuh7FlepCDtiGqYL4ZxzDY7xLfqNpLaaRyXo86WhUAf14hUUNgB9YgReZvQoIU9hXdi6+CoiLGivs/iZ2V+wbsRabsCaL247JWKsC7mJrAXAS55N9GLcKvhM4kAM+YHEhaASXkz0u81LBN2pkdQ74ijn/CfAFC3LANOZlgE8tWYX7I2zI4kJrfg54ieWZ40csaamJ91ia+TzHYA64gT09ZhC96lvNBq5jXw7YhXiKTaOXS659prPwBssaCN0C/hxPnkHMo4Pe/wdAtPJ1eNrRqGt20ayO1EC6yeBc3ijrALE23qnECqgNcAEn8o2VPpy9qVoXpqAmQHSAg7hXd7RtX+Zc7MeO9DVeTSKHMYTbiCf5V19mS311Z27LoDuVgtdvdh5WGZl8sDgAAAAASUVORK5CYII="/>
-          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAh5JREFUSEu11UmojmEUB/DfFdmQBZIsUeYiWShFlLAxlCFFCZlSkrFEMoQSyRB2hJJhw46FBUpExiJZWBiSBSlEOrfz1Xvf+w2vxT2b73ue53/O/znnOef/tulia+vi+FoR9MBszMBoDKXd5x2e4Cau4HejizYjmIaTGNIiy7dYiVv1cI0ItmB/3rZKFf9iKw6VwfUINuNAlah1MBtwpLhfJpiSqcZ+1HcZVmMHuuFN1ns44tb7cALHMC/3JuFujaRI0BPPMTgPd2Nn/o93+Ihvue6FgXid6+3Ym/9fYAz+xLpIsACXCulFqpFyFTuITQXgrKxAB4LzWFwATcS9KtHzxo8LFz6OdeUMojwjCmmOrBi8BnuIcbl4gAllgk/on4DrmPOfBBewKH2+oF+Z4AMGJOA2pv4nwQ3MTJ/v6F0meISxCYhu6dtMAkrkISmf0Sf3XyFaucMjn8HyguMKnK2YRWBPF7DnsKRMEDW/iq+IFKPPY/xDj340IIp5WJsDF4NYs/m4XCaImYhOGoTpWIWl+JU9vRA/M0KU5FriupfIX2JUTnUnuZ6b8vse43PwJmcWa0qBLiJIyxaViC5st3pidxTrU3/2NHmDXQUpqcEOY2PRp5Fch7iFFt3BUzzDqRJZnAeuZqHCleS65hCqGHoU0xnyHQ9etFDSbbifmhW/nazVJzPO45MZMh2ZFG1Y9no8dkNrRdDMt9JZlxP8A6W4Yxl3/dANAAAAAElFTkSuQmCC"/>
-          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAa1JREFUSEvV1T9IVlEYx/GPRuRQERE4iEQZOAUGSiCZ0VCbUFTQYKU1hKtCDm5FgdAWRUM5WmRRUINTIFLQFgS1BFFBQyBBQxFo8cB55XJ57/svX8Rnuveec37f5zzP75zbosnR0mR9GxJwEHsxG9VZqx3swDBG0YOf2P6/gFYcxwWcwOZMPz9jd6OALlzEOXQk0W9Yybw/xql6AFtxOpXgUCbTv7iN56nmUaqIK5iuBTCAkSQekGy8T8BdmMOWzOBRvCwCxLbPJ+F9Zc7JH9zAdZzFfUQ/ShGlimR+5QG9uIZjFdz1OtU/sp/C1TIJvMP+0vesTT+gu+Bkh+0mcSeN38JYwdx7uFQOsAmDqd5hu/Y06QUu42uy4gOcrHDFxNy75QDZNVHTIwhXPEkD2/AU0cBKEQftbTVAXiCatoADVcR/pwYv1wvow5sq4jG8iLD2atR6F4Wz5tOqJewsgN3ERCOAM3iIcNphDCGc1JYDxbxHjQDCGePox/ckEF5/hj0ZwXj+1AggxL7gRy7juJJnkm3Dxp350tXag2r9jX/BR7xqFqAwgbXawfoB/gFHxEAZDeKOygAAAABJRU5ErkJggg=="/>
+          <button onclick="index()"><i class='text-3xl bx bxl-facebook-square'></i> </button>
+          <button onclick="index()"><i class='text-3xl bx bxl-github' ></i></button>
+          <button onclick="index()"><i class='text-3xl bx bxl-telegram' ></i></button>
         </div>
       </section>
       <div class="p-2 border-t border-black my-4"></div>
@@ -154,6 +149,7 @@
         <h1 class="text-[#565B58] ">Copyright © 2020.Shariar Creative  </h1>
         <h1 class="text-[#565B58] ">Designed by Shariar</h1>
       </div>
+
     </footer>
     <script type="" src="index.js"></script>
   </body>
