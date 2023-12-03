@@ -2,7 +2,7 @@ function depositeMoney(){
     var dip = parseInt(document.getElementById('diposite').value); // Getting the value from input field
     if (document.getElementById('diposite').value.trim() == '' || dip<0){  //This is to ensure that user can't send empty value
         document.getElementById('diposite').value = '';
-        alert('Please enter a valid in the input field.');
+        alert('Please enter a valid number.');
         return;
     }
     var currentAmount = parseInt(document.getElementById('current-wallet').innerText);
@@ -22,7 +22,7 @@ function withdrawMoney(){
 
     if (document.getElementById('withdraw').value.trim() == '' || wit<0){  //This is to ensure that user can't send empty value
         document.getElementById('withdraw').value = '';
-        alert('Please enter a valid in the input field.');
+        alert('Please enter a valid number.');
         return;
     }
 
